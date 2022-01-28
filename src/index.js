@@ -67,7 +67,7 @@
 // Используй методы Math.floor(), Math.ceil() и Math.round().
 // Проверь что будет в консоли при значениях 27.3 и 27.9.
 
-// const value = 27.5;
+// const value = 27.9;
 // console.log(Math.floor(value)); // 27
 // console.log(Math.ceil(value)); // 28
 // console.log(Math.round(value)); // 28
@@ -158,13 +158,50 @@
 // 70 покажет 01:10
 // 450 покажет 07:30
 // 1441 покажет 24:01
-const totalMinutes = 70; // 01:10
+// const totalMinutes = 1441; // 01:10
 
-const hours = Math.floor(totalMinutes / 60);
-const minutes = totalMinutes % 60;
-console.log(hours);
-console.log(minutes);
+// const hours = Math.floor(totalMinutes / 60);
+// const minutes = totalMinutes % 60;
+// console.log(hours);
+// console.log(minutes);
 
-const doubleDigitHours = String(hours).padStart(2, 0);
-const doubleDigitMinutes = String(minutes).padStart(2, 0);
-console.log(`${doubleDigitHours}:${doubleDigitMinutes}`);
+// const doubleDigitHours = String(hours).padStart(2, 0);
+// const doubleDigitMinutes = String(minutes).padStart(2, 0);
+// console.log(`${doubleDigitHours}:${doubleDigitMinutes}`);
+
+
+// =============Цыклы================= 
+// const target = 3;
+// let sum = 0;
+// for (let i = 0; i <= target; i += 1) {
+//   sum += i;
+// }
+// console.log(sum);
+
+// for (let i = 0; i <= 10; i = 1){
+//     console.log(i);
+// }
+// console.log('summa');
+
+
+
+//Скрипт который подсчитывает сумму всех четных чисел
+//которые входят в диапазон от мин до мах.Например если мин=0 макс=5,то диапазон 0-5 и в нем 2 четных числа 2 и 4,а их сумма = 6
+// const min = 1;
+// const max = 20;
+// let total = 0;
+// //фор от мин до мах с шагом 1
+// for (let i = min; i <= max; i += 1){
+// //проверяем остаток от деления
+//     if (i % 2 !== 0) {
+//         // console.log('не четное: ', i);
+//         continue;
+//     }
+// //пишем в сумму
+//     console.log('четное: ', i);
+//     total += i;
+// }
+
+// console.log('total: ', total);
+
+//Скрипт который 
