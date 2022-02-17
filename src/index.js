@@ -1119,42 +1119,66 @@ console.log('Module 2.2');
 // removeCourse(name) - удаляет курс из коллекции
 // updateCourse(oldName, newName) - изменяет имя на новое
 
-const courses = ['HTML', 'CSS', 'JavaScript', 'React', 'PostgreSQL'];
+// const courses = ['HTML', 'CSS', 'JavaScript', 'React', 'PostgreSQL'];
 
-function addCourse(courses, name) {
-  if (courses.includes(name)) {
-    console.log('У вас уже есть такой курс');
-    return;
-  }
+// function addCourse(courses, name) {
+//   if (courses.includes(name)) {
+//     console.log('У вас уже есть такой курс');
+//     return;
+//   }
 
-  courses.push(name);
-}
+//   courses.push(name);
+// }
 
-function removeCourse(name) {
-  if (!courses.includes(name)) {
-    console.log('Курс с таким имененем не найден');
-    return;
-  }
+// function removeCourse(name) {
+//   if (!courses.includes(name)) {
+//     console.log('Курс с таким имененем не найден');
+//     return;
+//   }
 
-  const index = courses.indexOf(name);
-  courses.splice(index, 1);
-}
+//   const index = courses.indexOf(name);
+//   courses.splice(index, 1);
+// }
 
-function updateCourse(oldName, newName) {
-  const index = courses.indexOf(oldName);
+// function updateCourse(oldName, newName) {
+//   const index = courses.indexOf(oldName);
 
-  courses.splice(index, 1, newName);
-}
+//   courses.splice(index, 1, newName);
+// }
 
-addCourse(courses, 'Express');
-console.log(courses); // ['HTML', 'CSS', 'JavaScript', 'React', 'PostgreSQL', 'Express']
-addCourse(courses, 'CSS'); // 'У вас уже есть такой курс'
+// addCourse(courses, 'Express');
+// console.log(courses); // ['HTML', 'CSS', 'JavaScript', 'React', 'PostgreSQL', 'Express']
+// addCourse(courses, 'CSS'); // 'У вас уже есть такой курс'
 
-removeCourse('React');
-console.log(courses); // ['HTML', 'CSS', 'JavaScript', 'PostgreSQL', 'Express']
-removeCourse('Vue'); // 'Курс с таким имененем не найден'
+// removeCourse('React');
+// console.log(courses); // ['HTML', 'CSS', 'JavaScript', 'PostgreSQL', 'Express']
+// removeCourse('Vue'); // 'Курс с таким имененем не найден'
 
-updateCourse('Express', 'NestJS');
-console.log(courses); // ['HTML', 'CSS', 'JavaScript', 'PostgreSQL', 'NestJS']
+// updateCourse('Express', 'NestJS');
+// console.log(courses); // ['HTML', 'CSS', 'JavaScript', 'PostgreSQL', 'NestJS']
 
 // https://github.com/goitacademy/javascript-homework/tree/main/homework-02
+
+
+
+const bookShelf = {
+  books: ["Последнее королевство"],
+  getBooks() {
+    return this.books;
+  },
+  addBook(bookName) {
+    this.books.push(bookName);
+  },
+  removeBook(bookName) {
+    const bookIndex = this.books.indexOf(bookName);
+    this.books.splice(bookIndex, 1);
+  },
+
+};
+
+console.log(bookShelf.getBooks()); // []
+bookShelf.addBook("Мгла");
+bookShelf.addBook("Страж снов");
+console.log(bookShelf.getBooks()); // ["Последнее королевство", "Мгла", "Страж снов"]
+bookShelf.removeBook("Мгла");
+console.log(bookShelf.getBooks()); // ["Последнее королевство", "Страж снов"]
